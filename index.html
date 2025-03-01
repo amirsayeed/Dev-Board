@@ -10,34 +10,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/d683e928ca.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <style>
-        .poppins {
-            font-family: "Poppins", sans-serif;
-        }
-    </style>
 </head>
 
-<body class="bg-[#F4F7FF] poppins">
-    <header class="max-w-7xl mx-auto max-h-24 p-2 bg-white rounded-lg shadow-md">
-        <nav class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
+<body class="poppins">
+    <header class="max-w-7xl mx-auto pt-5">
+        <nav class="flex items-center justify-between bg-white rounded-lg shadow-md">
+            <div class="flex items-center gap-2 p-2">
                 <img src="./assets/logo.png" alt="">
                 <h1 class="text-4xl text-[#00303C] font-light">Dev<span class="font-semibold">Board</span></h1>
             </div>
-            <div class="flex gap-7">
+            <div class="flex gap-7 p-2">
                 <div class="flex items-center ">
                     <span class="p-3 rounded-full bg-white"><i class="fa-solid fa-square-check fa-2xl"
                             style="color: #3752FD;"></i></span>
-                    <p class="text-2xl font-semibold">23</p>
+                    <p id="task-done" class="text-2xl font-semibold">23</p>
                 </div>
                 <div>
-                    <button><img src="./assets/theme-btn.png" alt=""></button>
+                    <button onclick="changeBg()"><img class="w-full" src="./assets/theme-btn.png" alt=""></button>
                 </div>
             </div>
         </nav>
@@ -45,29 +34,28 @@
     <main class="max-w-7xl mx-auto mt-5">
         <section class="flex gap-5 mb-4">
             <section class="w-3/4 bg-white rounded-lg shadow-md p-5">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#F4F7FF] shadow-sm">
-                        <div class="flex items-center justify-around gap-3 p-4">
+                <div class="flex justify-between items-center gap-3">
+                    <div class="flex-none bg-[#F4F7FF] shadow-sm p-4 rounded-lg">
+                        <div class="flex items-center justify-around gap-5">
                             <span class="p-3 rounded-full bg-white"><i class="fa-solid fa-square-check fa-xl"
                                     style="color: #3752FD;"></i></span>
                             <div>
                                 <h2>Task Assigned</h2>
-                                <p class="text-3xl font-bold">06</p>
+                                <p id="task-remaining" class="text-3xl font-bold">6</p>
                             </div>
                         </div>
                     </div>
-                    <div id="discover" class="card bg-base-100 shadow-sm p-4">
-                        <div class="flex">
-                            <img class="w-16" src="./assets/board.png" alt="">
-                            <h3 class="text-2xl text-white">Discover Something<br> New Today!</h3>
+                    <div id="discover" class="grow shadow-sm p-4 rounded-lg">
+                        <div class="flex items-center justify-center gap-3">
+                            <img class="w-12" src="./assets/board.png" alt="">
+                            <h3 class="text-xl text-white">Discover Something<br> New Today!</h3>
                         </div>
                     </div>
-                    <div class="card bg-[#F4F7FF] shadow-sm p-4">
-                        <div class="flex items-center justify-center gap-4">
+                    <div class="flex-none bg-[#F4F7FF] shadow-sm p-4 rounded-lg">
+                        <div class="flex items-center gap-4">
                             <img class="p-3 rounded-full bg-white" src="./assets/calender.png" alt="">
                             <div>
-                                <h4 class="text-xl">Wed,<br>
-                                    Jul 28, 2025</h4>
+                                <h4 id="current-date" class="text-xl"></h4>
                             </div>
                         </div>
                     </div>
@@ -91,7 +79,7 @@
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary">Completed</button>
+                                <button class="btn btn-primary activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -111,7 +99,7 @@
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary">Completed</button>
+                                <button class="btn btn-primary activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -132,7 +120,7 @@
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary">Completed</button>
+                                <button class="btn btn-primary activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -153,7 +141,7 @@
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary">Completed</button>
+                                <button class="btn btn-primary activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -174,7 +162,7 @@
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary">Completed</button>
+                                <button class="btn btn-primary activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -195,7 +183,7 @@
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary">Completed</button>
+                                <button class="btn btn-primary activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -208,13 +196,20 @@
                         <img src="./assets/activity.png" alt="">
                         <h2 class="text-xl">Activity Log</h2>
                     </div>
-                    <button class="btn bg-[#3752FD]">Clear History</button>
-                    <div></div>
+                    <button onclick="remove()" id="clear-btn" class="btn bg-[#3752FD] rounded-lg text-white">Clear
+                        History</button>
+
                     <div class="my-4 border border-dashed border-[#3752FD33]"></div>
+                    <div id="activity-container" class="p-2">
+
+                    </div>
                 </div>
             </section>
         </section>
     </main>
+    <script src="./js/script.js"></script>
+    <script src="./js/remove.js"></script>
+    <script src="./js/route.js"></script>
 </body>
 
 </html>
