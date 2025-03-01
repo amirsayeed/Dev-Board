@@ -22,10 +22,10 @@
             </div>
         </nav>
     </header>
-    <main class="max-w-7xl mx-auto my-5">
-        <section>
+    <main class="max-w-7xl mx-auto mt-5">
+        <section class="pb-5">
             <h2 class="text-3xl text-center font-semibold">Blogs</h2>
-            <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="bg-white p-4 rounded-lg shadow-md my-5">
                 <h2 class="text-lg font-semibold">Question-1: What are the different ways to select an element in the
                     DOM?
                 </h2>
@@ -54,7 +54,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-5">
                 <h2 class="text-lg font-semibold">Question-2: What is the difference between innerHTML, innerText, and
                     textContent ?</h2>
                 <div class="my-4 border border-dashed border-[#3752FD33]"></div>
@@ -69,25 +69,53 @@
                     raw text content that includes whitespace and line breaks, as well as hidden text and it's value is
                     not parsed as HTML.</p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-5">
                 <h2 class="text-lg font-semibold">Question-3: What is event delegation in the DOM?</h2>
                 <div class="my-4 border border-dashed border-[#3752FD33]"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi soluta quam modi molestiae
-                    accusamus doloremque quod officiis, itaque mollitia?</p>
+                <p class="text-gray-700 text-lg"> Event delegation is a technique which allows the parent element to
+                    handle events instead of attaching event listeners to child element individually. When an event
+                    occurs in a child element it will reach through the
+                    parent element using event bubbling
+                    concept where the event listener is attached to and by the use of event.target the element is
+                    identified inside the event listener and further operation are performed.</p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-5">
                 <h2 class="text-lg font-semibold">Question-4: What is event bubbling in the DOM?</h2>
                 <div class="my-4 border border-dashed border-[#3752FD33]"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi soluta quam modi molestiae
-                    accusamus doloremque quod officiis, itaque mollitia?</p>
+                <p class="text-lg text-gray-700 pb-2">When an event is attached to or performed on an element, the event
+                    is
+                    bubbled up or propagated to its parent and grandparent elements while triggering each ancestor
+                    elements event listeners until it reaches the root element.</p>
+                <div class="text-gray-700 text-lg">
+                    <p class="pb-2">If there is a div with class parent-div with a div with class child-div and that
+                        child-div has a
+                        button element where click event is performed and there are event listeners attched to
+                        parent-div, child-div and button element where it will console such element is clicked then the
+                        sequence will be:</p>
+                    <p>Button is clicked</p>
+                    <p>Child-div is clicked</p>
+                    <p>Parent-div is clicked</p>
+                </div>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <div class="bg-white p-4 rounded-lg shadow-md">
                 <h2 class="text-lg font-semibold">Question-5: How do you create, add, and remove elements using
                     JavaScript?
                 </h2>
                 <div class="my-4 border border-dashed border-[#3752FD33]"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi soluta quam modi molestiae
-                    accusamus doloremque quod officiis, itaque mollitia?</p>
+                <p class="text-gray-700 text-lg">To create an element in JavaScript, document.createElement(element) is
+                    used, to add content to an
+                    element innerHTML, innerText or textContent are used and to remove an element remove() or its child
+                    removeChild() is used. For example:</p><br>
+                <div class="text-gray-700">
+                    <h4 class="font-medium">1. Create an Element</h4>
+                    <p>const div = document.getElementById("para-container")</p>
+                    <p>const p = document.createElement("p") </p>
+                    <h4 class="font-medium">2. Add the element</h4>
+                    <p>p.innerText = "Hello Developer"</p>
+                    <p>div.appendChild(p)</p>
+                    <h4 class="font-medium">3. Remove the element</h4>
+                    <p>p.remove()</p>
+                </div>
             </div>
         </section>
     </main>
