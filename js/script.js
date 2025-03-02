@@ -6,16 +6,19 @@ for(const activity of activityBtn){
     activity.addEventListener('click', function(event){
         alert('Board updated Successfully');
         this.setAttribute('disabled', true);
+
         const task = event.target.parentNode.parentNode.childNodes[3].innerText;
         const d = new Date();
         const time = d.toLocaleTimeString();
+
         const taskRemainingValue = getConvertedValueById('task-remaining');
         const taskCompletedValue = getConvertedValueById('task-done');
         setInnerTextById('task-remaining', taskRemainingValue - 1);  
         setInnerTextById('task-done', taskCompletedValue + 1);
+        
         const activityContainer = document.getElementById('activity-container');
         const div = document.createElement('div');
-        div.classList.add('bg-[#F4F7FF]','p-2', 'rounded', 'drop-shadow-lg', 'mb-2');
+        div.classList.add('bg-[#F4F7FF]','p-2', 'rounded-lg', 'shadow-md', 'mb-5');
         div.innerHTML = `
         <p class="text-left">You have completed the task ${task} at ${time}</p>
         `

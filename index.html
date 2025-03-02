@@ -14,44 +14,44 @@
 
 <body class="poppins">
     <header class="max-w-7xl mx-auto pt-5">
-        <nav class="flex items-center justify-between bg-white rounded-lg shadow-md">
-            <div class="flex items-center gap-2 p-2">
-                <img src="./assets/logo.png" alt="">
+        <nav class="flex flex-col md:flex-row items-center justify-between bg-white rounded-2xl shadow-md p-2">
+            <div class="flex items-center gap-2">
+                <img class="w-full" src="./assets/logo.png" alt="">
                 <h1 class="text-4xl text-[#00303C] font-light">Dev<span class="font-semibold">Board</span></h1>
             </div>
-            <div class="flex gap-7 p-2">
-                <div class="flex items-center ">
-                    <span class="p-3 rounded-full bg-white"><i class="fa-solid fa-square-check fa-2xl"
-                            style="color: #3752FD;"></i></span>
+            <div class="flex gap-7">
+                <div class="flex items-center bg-[#F4F7FF] px-2 py-1 rounded-full gap-3">
+                    <span><i class="fa-solid fa-square-check fa-2xl" style="color: #3752FD;"></i></span>
                     <p id="task-done" class="text-2xl font-semibold">23</p>
                 </div>
                 <div>
-                    <button onclick="changeBg()"><img class="w-full" src="./assets/theme-btn.png" alt=""></button>
+                    <button class="bg-[#F4F7FF] rounded-full p-2" onclick="changeBg()"><img class="w-full"
+                            src="./assets/theme-btn.png" alt=""></button>
                 </div>
             </div>
         </nav>
     </header>
     <main class="max-w-7xl mx-auto mt-5">
-        <section class="flex gap-5 mb-4">
-            <section class="w-3/4 bg-white rounded-lg shadow-md p-5">
-                <div class="flex justify-between items-center gap-3">
-                    <div class="flex-none bg-[#F4F7FF] shadow-sm p-4 rounded-lg">
+        <section class="flex flex-col md:flex-row gap-5 pb-4">
+            <section class="md:w-3/4 bg-white rounded-2xl shadow-md p-5">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-3">
+                    <div class="flex-none bg-[#F4F7FF] shadow-md p-4 rounded-xl">
                         <div class="flex items-center justify-around gap-5">
                             <span class="p-3 rounded-full bg-white"><i class="fa-solid fa-square-check fa-xl"
                                     style="color: #3752FD;"></i></span>
                             <div>
                                 <h2>Task Assigned</h2>
-                                <p id="task-remaining" class="text-3xl font-bold">6</p>
+                                <p id="task-remaining" class="text-2xl font-extrabold">6</p>
                             </div>
                         </div>
                     </div>
-                    <div id="discover" class="grow shadow-sm p-4 rounded-lg">
-                        <div class="flex items-center justify-center gap-3">
-                            <img class="w-12" src="./assets/board.png" alt="">
-                            <h3 class="text-xl text-white">Discover Something<br> New Today!</h3>
+                    <div id="discover" class="grow shadow-md p-4 rounded-xl">
+                        <div class="flex items-center justify-center gap-4">
+                            <img class="max-w-14" src="./assets/board.png" alt="">
+                            <h3 class="text-base md:text-xl text-white">Discover Something <br> New Today!</h3>
                         </div>
                     </div>
-                    <div class="flex-none bg-[#F4F7FF] shadow-sm p-4 rounded-lg">
+                    <div class="flex-none bg-[#F4F7FF] shadow-md p-4 rounded-xl">
                         <div class="flex items-center gap-4">
                             <img class="p-3 rounded-full bg-white" src="./assets/calender.png" alt="">
                             <div>
@@ -61,142 +61,154 @@
                     </div>
                 </div>
                 <div class="my-8 border border-dashed border-[#3752FD33]"></div>
-                <div class="grid grid-cols-3 gap-5">
-                    <div class="card bg-[#F4F7FF] shadow-sm rounded-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="card bg-[#F4F7FF] shadow-md rounded-2xl text-[#00303C]">
 
                         <div class="card-body space-y-3">
-                            <div class="p-2 bg-white max-w-32 rounded-lg text-center">
+                            <div class="p-2 bg-white max-w-28 rounded-lg text-center">
                                 <p>ShopEase</p>
                             </div>
-                            <h2 class="text-xl">Fix Mobile Button Issue </h2>
+                            <h2 class="text-xl font-medium">Fix Mobile Button Issue </h2>
                             <div class="bg-white rounded-md">
-                                <p class="p-3">Debug using Chrome DevTools, check for overlapping elements, and ensure
+                                <p class="p-3 text-gray-600">Debug using Chrome DevTools, check for overlapping
+                                    elements, and ensure
                                     onClick works properly
                                     and ensure onClick works properly</p>
                             </div>
-                            <div class="flex justify-between items-center">
+                            <div class="flex flex-col md:flex-row justify-between items-center">
                                 <div>
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary activity-btn">Completed</button>
+                                <button
+                                    class="btn bg-[#3752FD] rounded-lg text-[#FFFFFF] activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-[#F4F7FF] shadow-sm rounded-2xl">
+                    <div class="card bg-[#F4F7FF] shadow-md rounded-2xl text-[#00303C]">
 
                         <div class="card-body space-y-3">
-                            <div class="p-2 bg-white max-w-32 rounded-lg text-center">
+                            <div class="p-2 bg-white max-w-28 rounded-lg text-center">
                                 <p>CloudSync</p>
                             </div>
-                            <h2 class="text-xl">Add Dark Mode </h2>
+                            <h2 class="text-xl font-medium">Add Dark Mode </h2>
                             <div class="bg-white rounded-md">
-                                <p class="p-3">Store the user's preference in localStorage, update CSS variables
-                                    dynamically, and apply a smooth transition effect.</p>
+                                <p class="p-3 text-gray-600">Store the user's preference in localStorage, update CSS
+                                    variables
+                                    dynamically, and apply a smooth transition effect ensure onclick works properly</p>
                             </div>
-                            <div class="flex justify-between items-center">
+                            <div class="flex flex-col md:flex-row justify-between items-center">
                                 <div>
                                     <h4>Deadline</h4>
-                                    <p class="font-medium">21 March 2025</p>
+                                    <p class="font-medium">25 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary activity-btn">Completed</button>
+                                <button
+                                    class="btn bg-[#3752FD] rounded-lg text-[#FFFFFF] activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-[#F4F7FF] shadow-sm rounded-2xl">
+                    <div class="card bg-[#F4F7FF] shadow-md rounded-2xl text-[#00303C]">
 
-                        <div class="card-body space-y-2">
-                            <div class="p-2 bg-white max-w-32 rounded-lg text-center">
+                        <div class="card-body space-y-3">
+                            <div class="p-2 bg-white max-w-28 rounded-lg text-center">
                                 <p>SwiftPay</p>
                             </div>
-                            <h2 class="text-xl">Optimize Home page </h2>
+                            <h2 class="text-xl font-medium">Optimize Home page </h2>
                             <div class="bg-white rounded-md">
-                                <p class="p-3">Debug using Chrome DevTools, check for overlapping elements, and ensure
+                                <p class="p-3 text-gray-600">Debug using Chrome DevTools, check for overlapping
+                                    elements, and ensure
                                     onClick works properly
                                     and ensure onClick works properly</p>
                             </div>
-                            <div class="flex justify-between items-center">
+                            <div class="flex flex-col md:flex-row justify-between items-center">
                                 <div>
                                     <h4>Deadline</h4>
-                                    <p class="font-medium">21 March 2025</p>
+                                    <p class="font-medium">31 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary activity-btn">Completed</button>
+                                <button
+                                    class="btn bg-[#3752FD] rounded-lg text-[#FFFFFF] activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-[#F4F7FF] shadow-sm rounded-2xl">
+                    <div class="card bg-[#F4F7FF] shadow-md rounded-2xl text-[#00303C]">
 
                         <div class="card-body space-y-3">
-                            <div class="p-2 bg-white max-w-32 rounded-lg text-center">
+                            <div class="p-2 bg-white max-w-28 rounded-lg text-center">
                                 <p>Meta</p>
                             </div>
-                            <h2 class="text-xl">Add new emoji 🤲</h2>
+                            <h2 class="text-xl font-medium">Add new emoji 🤲</h2>
                             <div class="bg-white rounded-md">
-                                <p class="p-3">Debug using Chrome DevTools, check for overlapping elements, and ensure
+                                <p class="p-3 text-gray-600">Debug using Chrome DevTools, check for overlapping
+                                    elements, and ensure
                                     onClick works properly
                                     and ensure onClick works properly</p>
                             </div>
-                            <div class="flex justify-between items-center">
+                            <div class="flex flex-col md:flex-row justify-between items-center">
                                 <div>
                                     <h4>Deadline</h4>
                                     <p class="font-medium">21 March 2025</p>
                                 </div>
-                                <button class="btn btn-primary activity-btn">Completed</button>
+                                <button
+                                    class="btn bg-[#3752FD] rounded-lg text-[#FFFFFF] activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-[#F4F7FF] shadow-sm rounded-2xl">
+                    <div class="card bg-[#F4F7FF] shadow-md rounded-2xl text-[#00303C]">
 
                         <div class="card-body space-y-3">
-                            <div class="p-2 bg-white max-w-32 rounded-lg text-center">
+                            <div class="p-2 bg-white max-w-28 rounded-lg text-center">
                                 <p>Google LLC</p>
                             </div>
-                            <h2 class="text-xl">Integrate OpenAI API </h2>
+                            <h2 class="text-xl font-medium">Integrate OpenAI API </h2>
                             <div class="bg-white rounded-md">
-                                <p class="p-3">Debug using Chrome DevTools, check for overlapping elements, and ensure
+                                <p class="p-3 text-gray-600">Debug using Chrome DevTools, check for overlapping
+                                    elements, and ensure
                                     onClick works properly
                                     and ensure onClick works properly</p>
                             </div>
-                            <div class="flex justify-between items-center">
+                            <div class="flex flex-col md:flex-row justify-between items-center">
                                 <div>
                                     <h4>Deadline</h4>
-                                    <p class="font-medium">21 March 2025</p>
+                                    <p class="font-medium">01 April 2025</p>
                                 </div>
-                                <button class="btn btn-primary activity-btn">Completed</button>
+                                <button
+                                    class="btn bg-[#3752FD] rounded-lg text-[#FFFFFF] activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-[#F4F7FF] shadow-sm rounded-2xl">
+                    <div class="card bg-[#F4F7FF] shadow-md rounded-2xl text-[#00303C]">
 
                         <div class="card-body space-y-3">
-                            <div class="p-2 bg-white max-w-32 rounded-lg text-center">
+                            <div class="p-2 bg-white max-w-28 rounded-lg text-center">
                                 <p>Glassdoar</p>
                             </div>
-                            <h2 class="text-xl">Improve Job searching </h2>
+                            <h2 class="text-xl font-medium">Improve Job searching </h2>
                             <div class="bg-white rounded-md">
-                                <p class="p-3">Debug using Chrome DevTools, check for overlapping elements, and ensure
+                                <p class="p-3 text-gray-600">Debug using Chrome DevTools, check for overlapping
+                                    elements, and ensure
                                     onClick works properly
                                     and ensure onClick works properly</p>
                             </div>
-                            <div class="flex justify-between items-center">
+                            <div class="flex flex-col md:flex-row justify-between items-center">
                                 <div>
                                     <h4>Deadline</h4>
-                                    <p class="font-medium">21 March 2025</p>
+                                    <p class="font-medium">10 April 2025</p>
                                 </div>
-                                <button class="btn btn-primary activity-btn">Completed</button>
+                                <button
+                                    class="btn bg-[#3752FD] rounded-lg text-[#FFFFFF] activity-btn">Completed</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </section>
-            <section class="w-1/4 bg-white rounded-lg shadow-md p-5">
+            <section class="md:w-1/4 bg-white rounded-2xl shadow-md p-5">
                 <div class="text-center space-y-2">
-                    <div class="flex items-center justify-center gap-3">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-3">
                         <img src="./assets/activity.png" alt="">
                         <h2 class="text-xl">Activity Log</h2>
                     </div>
-                    <button onclick="remove()" id="clear-btn" class="btn bg-[#3752FD] rounded-lg text-white">Clear
+                    <button id="clear-btn" class="btn bg-[#3752FD] rounded-lg text-[#FFFFFF]">Clear
                         History</button>
 
                     <div class="my-4 border border-dashed border-[#3752FD33]"></div>
